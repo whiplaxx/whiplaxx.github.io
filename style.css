@@ -27,6 +27,7 @@ body{
 .main_body {
     margin: 50px 100px auto 100px;
     display: flex;
+    justify-content: space-between;
 }
 /*
 .main_body img {
@@ -35,13 +36,34 @@ body{
 }
 */
 .button {
+    position: relative;
     margin-right: 30px;
-    flex: 1;
-    box-shadow: 5px 5px white;
+    box-shadow: 5px 5px 8px #9b9b9b;
+    box-sizing: border-box;
+    flex-basis: 30%;
 }
+
+.button img {
+    border: 3px solid black;
+}
+
+.button p {
+    font-weight: bold;
+    font-size: 60px;
+    color: green;
+    text-shadow: 3px 3px 3px black;
+    position: absolute;
+    margin-bottom: 0px;
+    bottom: 0px;
+}
+
 
 .button:last-child {
     margin-right: 0px;
+}
+
+div.button {
+    
 }
 
 .button img{
