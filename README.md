@@ -1,3 +1,3 @@
-# whiplaxx.xyz
+# whiplax.xyz
 
 meu site ne po '-'
