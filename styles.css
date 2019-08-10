@@ -50,7 +50,8 @@ header {
 
 #subheader {
     opacity: 0.5;
-    background-color:  rgba(254, 138, 218, 0.6);
+    background-color:  rgba(50, 151, 28, 0.6);
+    color: white;
     position: absolute;
     text-align: center;
     margin-top: 0px;
@@ -69,6 +70,7 @@ header {
     display: flex;
     background-color: grey;
     flex-direction: row;
+    margin-top: 20px;
     margin-left: 10px;
     margin-right: 10px;
     width: auto;
