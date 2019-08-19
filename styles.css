@@ -1,126 +1,91 @@
 body {
-    margin: 0;
     height: 2000px;
+    width: 100%;
+
+    padding-top: 15px;
+    margin: 0px;
+
     background-color: black;
 }
 
 header {
-    text-align: center;
-    margin-top: 30px;
-    height: 110px;
-    background-color: rgb(90, 25, 90, 0.6);
-}
-
-#h_fixed {
-    width: 100%;
-    display: table;
-    position: sticky;
-    top: 30px;
-}
-
-#h_title {
     position: absolute;
-    font-weight: bold;
-    display: table-cell;
-    vertical-align: middle;
-    margin-top: 0px;
+    z-index: 2;
+    left: 0px;
+
+    height: auto;
     width: 100%;
-    font-size: 90px;
+
+    background-color: white;
 }
 
-#h_hover {
-    opacity: 0;
-    background: red;
-    color: white;
-    font-size: 70px;
-    font-weight: bold;
-    display: table-cell;
-    vertical-align: middle;
-    margin: 0;
-    top: 0;
-    left: 0;
+header h1 {
     position: relative;
-    opacity: 0;
-    transition: 0.5s;
-}
 
-#h_hover:hover {
-    opacity: 1;
-}
-
-#subheader {
-    opacity: 0.5;
-    background-color:  rgba(50, 151, 28, 0.6);
-    color: white;
-    position: absolute;
+    margin: 0;
+    height: 100%;
+    
+    font-size: 70px;
     text-align: center;
-    margin-top: 0px;
-    transition: 0.5s;
+}
+
+#top_menu {
     display: table;
     position: sticky;
+    top: 0;
+    z-index: 1;
+
+    height: 40px;
     width: 100%;
-    top: 140px;
-}
 
-#subheader:hover {
-    opacity: 1;
-}
-
-.container_1 {
-    display: flex;
     background-color: grey;
+
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#top_menu p {
+    /* adicionado a margem no <p> do top_menu pq o padding-left adicionado no top_menu fazia o width exceder o tamanho da pagina do browser */
+    margin: 0px;
+    margin-left: 10px;
+}
+
+#menu_1 {
+    display: flex;
     flex-direction: row;
-    margin: 10px;
-    height: 500px;
+
+    padding: 15px;
+    margin-top: 100px;
+
+    height: 320px;
     width: auto;
+
+    background-color: rgb(43, 43, 43, 1);
 }
 
-#sobre_mim {
+.menu_item {
     display: table;
-    max-width: 100%;
-    max-height: 100%;
+
+    margin-right: 15px;
+
+    max-width: 50%;
+    height: 100%;
     width: auto;
-    height: 100%;
-    padding: 10px;
 }
 
-#sobre_mim h1 {
+.menu_item h2 {
+    margin-bottom: 5px;
+    margin-top: 0px;
     color: white;
-    text-shadow: 3px 3px 3px black;
-    margin: 0px;
-    margin-bottom: 10px;
-    max-height: 10%;
-    max-width: 100%;
+
+    text-shadow: 2px 2px 2px black;
 }
 
-#sobre_mim img {
-    max-height: 90%;
-    max-width: 100%;
-    height: 100%;
-    width: 100%;
-}
-
-.menu_items {
-    display: table;
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: 100%;
-    padding: 10px;
-}
-
-.menu_items h1{
-    color: white;
-    text-shadow: 3px 3px 3px black;
-    margin: 0px;
-    margin-bottom: 10px;
-    max-height: 10%;
-    max-width: 100%;
-}
-
-.menu_items img {
-    max-width: 100%;
-    max-height: 90%;
-    height: 100%;
-    width: 100%;
+.menu_item img {
+    /* position relative necessario para fazer a imagem se encaixar no menu */
+    position: relative;
+    max-height: 290px;
+    height: auto;
+    width: auto;    
 }
