@@ -30,7 +30,7 @@ header h1 {
 }
 
 #top_menu {
-    display: table;
+    display: flex;
     position: sticky;
     top: 0;
     z-index: 1;
@@ -45,10 +45,26 @@ header h1 {
     text-align: left;
 }
 
+#top_menu img {
+    display: table; 
+    /* position relative faz a img e o p ficarem em fila mas ai o bottom 0px não funcionaria*/
+    position: absolute; 
+    bottom: 0px;
+
+    max-height: 35px;
+    height: auto;
+    width: auto;
+    
+    margin: 0px; 
+    margin-left: 10px;
+}
+
 #top_menu p {
+    display: table;
+
     /* adicionado a margem no <p> do top_menu pq o padding-left adicionado no top_menu fazia o width exceder o tamanho da pagina do browser */
     margin: 0px;
-    margin-left: 10px;
+    margin-left: 42px;
 }
 
 #menu_1 {
