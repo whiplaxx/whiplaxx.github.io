@@ -1,3 +1,3 @@
 # http://whiplax.xyz
 
-meu site ne po '-'
+meu site né po '-'
