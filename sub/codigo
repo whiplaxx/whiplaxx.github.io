@@ -1,0 +1,114 @@
+<html>
+	<head>
+		<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css"/>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+		<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+	</head>
+	
+	<body>
+		<div class="fluig-style-guide">
+			<form name="form" role="form">
+				
+				<!-- Panel Solicitante -->
+				<div class="panel panel-info">
+					<div class="panel-heading">
+						<div class="panel-title">
+							Solicitante
+						</div>
+					</div>
+				
+					<div class="panel-body">
+						
+						<div class="row">
+							
+							<!-- Departamento -->
+							<div class="form-group col-md-2">
+								<label for="departamento"> Departamento </label>
+								<select id="departamento" name="departamento" dataset="aeiou_DS_departamentos" datasetkey="nome" datasetvalue="nome" class="form-control">
+									</select>
+							</div>
+							
+						</div> <!-- /row-body-panelSolicitante -->
+					
+					</div> <!-- /body-panelSolicitante -->
+				
+				</div> <!-- /panelSolicitante -->
+			
+				<!-- Panel Rateio -->
+				<div class="panel panel-info">
+					
+					<div class="panel-heading">
+						<div class="panel-title">
+							Rateio
+						</div>
+					</div>
+					
+					<div class="panel-body">
+						
+						<div class="row">
+							<!-- Centro de Custo -->
+							<div class="form-group col-md-6">
+								<label for="cc_rateio1"> Centro de Custo </label>
+								<input
+								    type="zoom"
+								    id = "cc_rateio1"
+								    name="cc_rateio1"
+								    data-zoom="{
+								        'displayKey':'descricao',
+								        'datasetId':'aeiou_DS_centrosDeCusto',
+								        'maximumSelectionLength':'1',
+								        'placeholder':'Selecione o centro de custo',
+								        'fields':[
+								            {
+								               'field':'numero',
+								               'label':'Numero',
+								            	'standard':'true'
+								            },{
+								              'field':'descricao',
+								              'label':'Descrição'
+								            }
+								        ]
+								     }"
+								/>
+							</div> <!-- /cc_rateio1-row-body-panelRateio -->
+							
+							<!-- Filial -->
+							<div class="form-group col-md-4">
+								<label for="filial_rateio1"> Filial </label>
+								<select id="filial_rateio1" name="filial_rateio1" dataset="aeiou_DS_filiais" datasetkey="cidade" datasetvalue="cidade" class="form-control">
+									</select>
+							</div>
+							
+							<!-- Percentual -->
+							<div class="form-group col-md-2">
+								<label for="percentual_rateio1"> Percentual </label>
+								<input type="text" id="percentual_rateio1" name="percentual_rateio1" mask="#00.000,00%" class="form-control">
+							</div>
+							
+						</div> <!-- /row-body-panelRateio -->
+						
+					</div> <!-- /body-panelRateio -->
+					
+				</div> <!-- /panelRateio -->
+			
+			</form>
+		</div>
+	</body>
+	
+	<!-- SCRIPTS -->
+	
+		<!-- Script para fazer os campos select vazios como padrão -->
+		<script type="text/javascript">
+			document.getElementById("departamento").selectedIndex = -1; // departamento-panelSolicitante
+			document.getElementById("filial_rateio1").selectedIndex = -1; // filial_rateio1-panelRateio
+		</script>
+		
+		<script type="text/javascript"> 
+			// aumenta a altura da tela do formulário
+			parent.document.getElementById("tabs-ecm-cardPublisher-container-0").style.height = "100%";
+			parent.document.getElementById("ecm-cardPublisher-principal").style.height = "100%";
+		</script>
+	
+</html>
