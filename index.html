@@ -6,18 +6,20 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/3.4.1/themes/smoothness/jquery-ui.css" type="text/css">
     </head>
     <body>
-        <h1 id="ip"></h1>
+        <h1>PEGUEI SEU IP 😂😂😂</h1>
         <h1 id="ip2"></h1>
     </body>
 
     <script>
+        /*
         $(document).ready(function () {
             $.getJSON("http://jsonip.com/?callback=?", function (data) {
                 console.log(data);
                 document.getElementById("ip").innerHTML = data.ip;
             });
         });
-
+        */
+        
         $.get("http://ipinfo.io", function(response) {
             console.log(response)
             document.getElementById("ip2").innerHTML = response.ip;
