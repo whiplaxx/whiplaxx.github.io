@@ -6,8 +6,8 @@
         <link rel="stylesheet" href="//code.jquery.com/ui/3.4.1/themes/smoothness/jquery-ui.css" type="text/css">
     </head>
     <body>
-        <h1>PEGUEI SEU IP 😂😂😂</h1>
-        <h1 id="ip2"></h1>
+        <h1>PEGUEI SEU IP Gabriel 😂😂😂</h1>
+        <h1 id="ip"></h1>
     </body>
 
     <script>
@@ -22,7 +22,7 @@
         
         $.get("http://ipinfo.io", function(response) {
             console.log(response)
-            document.getElementById("ip2").innerHTML = response.ip;
+            document.getElementById("ip").innerHTML = response.ip;
         }, "jsonp");
     </script>
 
