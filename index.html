@@ -5,7 +5,7 @@
     </head>
     <body>
         <h1 id="ip"></h1>
-
+        <h1 id="ip2"></h1>
     </body>
 
     <script>
@@ -15,6 +15,10 @@
                 document.getElementById("ip").innerHTML = data.ip;
             });
         });
+
+        $.get("http://ipinfo.io", function(response) {
+            document.getElementById("ip2").innerHTML = response.ip;
+        }, "jsonp");
     </script>
 
 </html>
