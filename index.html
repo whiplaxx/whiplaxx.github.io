@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <h1 id="ip"></h1>
+
+    </body>
+
+    <script>
+        $(document).ready(function () {
+            $.getJSON("http://jsonip.com/?callback=?", function (data) {
+                console.log(data);
+                document.getElementById("ip").innerHTML = data.ip;
+            });
+        });
+    </script>
+
+</html>
